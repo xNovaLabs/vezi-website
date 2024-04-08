@@ -3,7 +3,6 @@ import Container from "@components/container.astro";
 import Faq from "@components/faq.astro";
 import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
-import Newsletter from "@components/newsletter.astro";
 import Layout from "@layouts/Layout.astro";
 import { changeLanguage } from "i18next";
 
@@ -15,6 +14,5 @@ changeLanguage("it");
 		<Hero dynamic={true} />
 		<Features />
 		<Faq />
-		<Newsletter />
 	</Container>
 </Layout>
