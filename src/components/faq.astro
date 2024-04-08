@@ -1,0 +1,84 @@
+---
+const { plan } = Astro.props;
+import { t } from "i18next";
+
+const faqs = [
+	{
+		title: "What is Vezi?",
+		description: "Vezi is a service that offers extremely cheap integration with existing Large Language Models such as ChatGPT for more accessibility.",
+	},
+	{
+		title: "Where do I get an API Key?",
+		description:
+			"You can join our discord at https://discord.gg/vezi and run the /getkey command to recieve a Free API Key.",
+	},
+	{
+		title: "How do I use this?",
+		description: "You can use it by sending a post request to our endpoint at https://veziapp.co/v1/chat/completions, with the required parameters. Alternatively you can use the openai module, and set the base_url to https://veziapp.co/v1/chat/completions."
+	},
+	{
+		title: "Do you support image models?",
+		description:
+			"Not at the minute but it is definitely planned.",
+	}
+];
+---
+
+<div class="mx-auto max-w-5xl px-6 py-24 sm:py-36 lg:px-8 lg:py-52 dark:bg-stone-950">
+	<div class="mx-auto divide-y divide-gray-900/10 dark:divide-gray-100/10">
+		<h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white">{t("faq.title")}</h2>
+		<dl class="mt-10 space-y-6 divide-y divide-gray-900/10 dark:divide-gray-100/10">
+			{
+				faqs.map((faq) => (
+					<div class="pt-6" x-data="{ open: false }">
+						<dt>
+							<button
+								type="button"
+								class="flex w-full items-start justify-between text-left text-gray-900 dark:text-white"
+								@click="open = !open"
+								:x-bind:aria-expanded="open.toString()">
+								<span class="text-base font-semibold leading-7">{faq.title}</span>
+								<span class="ml-6 flex h-7 items-center">
+									<svg
+										class="h-6 w-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										aria-hidden="true"
+										x-show="!open">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"></path>
+									</svg>
+									<svg
+										class="h-6 w-6"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										aria-hidden="true"
+										x-show="open">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6"></path>
+									</svg>
+								</span>
+							</button>
+						</dt>
+						<dd
+							x-transition:enter="transition ease-out duration-100"
+							x-transition:enter-start="opacity-0 transform scale-90"
+							x-transition:enter-end="opacity-100 transform scale-100"
+							x-transition:leave="transition ease-in duration-100"
+							x-transition:leave-start="opacity-100 transform scale-100"
+							x-transition:leave-end="opacity-0 transform scale-90"
+							class="mt-2 pr-12"
+							id="faq-0"
+							x-show="open">
+							<span class="text-base leading-7 text-gray-600 dark:text-gray-100">
+								<span set:html={faq.description}></span>
+							</span>
+						</dd>
+					</div>
+				))
+			}
+		</dl>
+	</div>
+</div>

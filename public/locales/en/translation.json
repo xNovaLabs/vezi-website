@@ -1,0 +1,30 @@
+{
+	"hero": {
+		"title": "Supercharged AI Integration",
+		"subtitle": "Bringing Large Language Models to everyone.",
+		"globe_title": "Craft Stunning AI Powered Applications for Cheap",
+		"main_button_text": "Get an API Key",
+		"secondary_button_text": "Join our Discord"
+	},
+	"hero_animated": {
+		"secondary_button_text": "Join our Discord"
+	},
+	"header": {
+		"features": "Features",
+		"pricing": "Pricing",
+		"primary_button_text": "Documentation",
+		"secondary_button_text": "Discord"
+	},
+	"features": {
+		"learn_more": "Learn more",
+		"title": "Features",
+		"subtitle": "All the models you will need",
+		"description": "Vezi provides lightning fast access to the most popular Large Language Models and an affordable price.",
+		"threepointfive": "An upgrade to the GPT-3.5 language model, boasts increased accuracy in following instructions and formatting responses. This allows for fine-tuning the model's tone and handling double the data, making it a powerful tool for developers and businesses seeking precise and efficient AI applications.",
+		"fourpointo": "OpenAI's GPT-4 is a cutting-edge multimodal language model, meaning it can process both text and images. This powerhouse goes beyond GPT-3.5, tackling professional tasks like writing legal documents or summarizing complex visuals. It even understands user prompts to adjust its tone and offers creative collaboration on writing projects.",
+		"muchmore": "and even more, including variations for gpt-3.5 and four; such as gpt-4-32k or gpt-3.5-turbo-16k. For the full list of models check out https://veziapp.co/v1/models"
+	},
+	"faq": {
+		"title": "Frequently Asked Questions"
+	}
+}
